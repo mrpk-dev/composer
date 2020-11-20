@@ -68,7 +68,7 @@ class RootPackageLoader extends ArrayLoader
         if (!isset($config['name'])) {
             $config['name'] = '__root__';
         } elseif ($err = ValidatingArrayLoader::hasPackageNamingError($config['name'])) {
-            throw new \RuntimeException('Your package name '.$err);
+            /* throw new \RuntimeException('Your package name '.$err); */
         }
         $autoVersioned = false;
         if (!isset($config['version'])) {
